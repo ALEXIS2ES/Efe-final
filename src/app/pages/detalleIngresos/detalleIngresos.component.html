@@ -1,0 +1,74 @@
+<div class="row animated fadeIn">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <input #input (keyup)="buscarDetalleIngreso( input.value )" type="text" class="form-control" placeholder="Buscar detalleIngreso...">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="text-right">
+                    <button [routerLink]="['/detalleIngreso','nuevo']" type="button" class="btn waves-effect waves-light btn-rounded btn-primary">
+                  <i class="fa fa-plus"></i> 
+                  Crear Detalle Ingreso
+                </button>
+                </div>
+
+                <h3 class="card-title">DetalleIngresos registrados ( <small> {{ _detalleIngresoService.totalDetalleIngresos }} </small> )</h3>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Ingreso</th>
+                            <th>Articulo</th>
+                            <th>Cantidad</th>
+                            <th>Precio Compra</th>
+                            <th>Precio Venta</th>
+
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let detalleIngreso of detalleIngresos">
+                            <td>
+                                {{ detalleIngreso.ingreso }}
+                            </td>
+                            <td>
+                                {{ detalleIngreso.articulo['nombre'] }}
+                            </td>
+                            <td>
+                                {{ detalleIngreso.cantidad }}
+                            </td>
+                            <td>
+                                {{ detalleIngreso.precioCompra }}
+                            </td>
+                            <td>
+                                {{ detalleIngreso.precioVenta }}
+                            </td>
+
+                            <td>
+                                <button [routerLink]="['/detalleIngreso', detalleIngreso._id ]" class="btn btn-primary">
+                              <i class="fa fa-edit"></i>
+                            </button>
+
+                                <button (click)="borrarDetalleIngreso( detalleIngreso )" class="btn btn-danger">
+                              <i class="fa fa-trash-o"></i>
+                            </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

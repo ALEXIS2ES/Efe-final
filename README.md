@@ -1,0 +1,15 @@
+# AdminSV
+
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+
+## Servidor de desarrollo
+
+Run `ng serve` para un servidor de desarrollo. Navegar a `http://localhost:4200/`. La aplicación se volverá a cargar automáticamente si cambia alguno de los archivos fuente.
+
+## Andamio de código
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+![GitHub Logo](http://aaronsapplications.com/wp-content/uploads/2018/01/Logo-Sistema-Ventas-300x300.png)
+
+- [x] Ususarios, #matenimiento, [https://github.com/ALEXIS2ES/Efe-final](), **asd**,   y de <del>usr</del>
